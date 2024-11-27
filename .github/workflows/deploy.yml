@@ -40,7 +40,7 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ecs-task-definition.json
-        service: fastapi-service
+        service: fastapi
         cluster: fastapi-cluster
         wait-for-service-stability: true
     
