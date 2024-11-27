@@ -1,0 +1,20 @@
+{
+    "family": "fastapi-app",
+    "containerDefinitions": [
+      {
+        "name": "fastapi-app",
+        "image": "335386407661.dkr.ecr.ap-northeast-2.amazonaws.com/fastapi-app:latest",
+        "memory": 512,
+        "cpu": 256,
+        "essential": true,
+        "portMappings": [
+          {
+            "containerPort": 80,
+            "hostPort": 80,
+            "protocol": "tcp"
+          }
+        ]
+      }
+    ]
+  }
+  
