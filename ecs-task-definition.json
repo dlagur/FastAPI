@@ -1,15 +1,13 @@
 {
-    "requiresCompatibilities": [
-        "FARGATE"
-    ],
+    "family": "fastapi-task",
     "networkMode": "awsvpc",
-    "family": "fastapi-app",
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "256", 
+    "memory": "512",  
     "containerDefinitions": [
       {
-        "name": "fastapi-app",
-        "image": "335386407661.dkr.ecr.ap-northeast-2.amazonaws.com/fastapi-app:latest",
-        "memory": 512,
-        "cpu": 256,
+        "name": "fastapi-container",
+        "image": "123456789012.dkr.ecr.ap-northeast-2.amazonaws.com/fastapi-app:latest",
         "essential": true,
         "portMappings": [
           {
@@ -19,6 +17,7 @@
           }
         ]
       }
-    ]
+    ],
+    "executionRoleArn": "arn:aws:iam::<account-id>:role/ecsTaskExecutionRole"
   }
   
