@@ -1,4 +1,8 @@
 {
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
     "family": "fastapi-app",
     "containerDefinitions": [
       {
